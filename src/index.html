@@ -3,11 +3,79 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="./styles/main.scss">
     <script src="main.js" defer></script>
-    <title>Template</title>
+    <title>Test task cience</title>
   </head>
   <body>
-    <h1>Template 5</h1>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <div class="header__content">
+          <div class="header__info">
+            <picture>
+              <source srcset="./images/logo-tablet.svg" media="(max-width: 1199px)">
+              <img
+                class="header__logo"
+                src="./images/logo.svg"
+                alt="logo"
+              >
+            </picture>
+            <h1 class="header__title">
+              Lorem ipsum dolor sit
+              consectetur adipiscing elit
+              nullam sagittis.
+            </h1>
+            <p class="header__subtitle">
+              Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit.
+              Nullam sagittis
+              risus et diam euismod vestibulum.
+              Fusce suscipit leo ornare nulla ullamcorper,
+              sed pellentesque libero ornare. Praesent egestas rhoncus sagittis.
+            </p>
+            <button class="header__button button">
+              Book a meeting
+            </button>
+          </div>
+
+          <picture class="header__man">
+            <source srcset="./images/man-phone.svg" media="(max-width: 767px)">
+            <source srcset="./images/man-tablets.svg" media="(max-width: 1199px)">
+            <source srcset="./images/man-laptop.svg" media="(max-width: 1600px)">
+            <img src="./images/man-fullhd.svg" alt="man">
+          </picture>
+        </div>
+      </div>
+    </header>
+
+    <div class="payment wrapper">
+      <div class="payment__content">
+        <div class="payment__info">
+          <h2 class="payment__title">
+            Lorem ipsum dolor sit amet,
+            consectetur elit eleifend mauris.
+          </h2>
+          <p class="payment__subtitle">
+            Phasellus quis sapien ac ex eleifend viverra non vulputate mi.
+            Praesent in sodales lacus, et vehicula ex.
+            Pellentesque elementum eu nisl non posuere.
+            Sed lobortis purus non tempor dapibus.
+            <br>
+            <br>
+            Sed nec iaculis leo, in luctus ipsum.
+            Sed eu neque consectetur, mollis neque vel, ultrices quam.
+            Donec ullamcorper consectetur lacinia.
+            Praesent laoreet enim eget leo suscipit,
+            at bibendum elit egestas. Cras euismod congue nunc id convallis.
+          </p>
+        </div>
+
+        <img
+          class="payment__image"
+          src="./images/payment.jpg"
+          alt="payment"
+        >
+      </div>
+    </div>
   </body>
 </html>

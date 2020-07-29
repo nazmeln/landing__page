@@ -1,0 +1,90 @@
+@import "./variables.scss";
+
+.intro {
+  position: relative;
+  text-align: center;
+  height: fit-content;
+
+  &__title {
+    margin-bottom: 45px;
+    margin-top: 65px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: $text-color;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 35px;
+  }
+
+  &__video {
+    text-align: center;
+    position: relative;
+    left: calc(50% - 460px);
+    width: 0;
+    height: 0;
+    padding-bottom: 510px;
+
+    & iframe {
+      position: absolute;
+      border: none;
+      width: 920px;
+      height: 100%;
+    }
+  }
+
+  &__services {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+}
+
+@media screen and (min-width: $tablets-small) and (max-width: $tablets-big) {
+  .intro {
+
+    &__title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    &__services {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__video {
+      left: calc(50% - 285px);
+      padding-bottom: 320px;
+
+      & iframe {
+        width: 570px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $phone-small) and (max-width: $phone-big) {
+  .intro {
+
+    &__title {
+      margin: 40px auto 20px;
+      width: 294px;
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    &__services {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__video {
+      left: calc(50% - 145px);
+      padding-bottom: 160px;
+
+      & iframe {
+        width: 294px;
+      }
+    }
+  }
+}

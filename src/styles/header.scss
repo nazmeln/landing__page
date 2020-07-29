@@ -70,6 +70,7 @@
 @media screen and (min-width: $tablets-small) and (max-width: $tablets-big) {
   .header {
     height: 481px;
+    background: url(../images/bg-photo-laptop.svg) center center/cover no-repeat;
 
     &__info {
       margin-top: 40px;
@@ -111,7 +112,6 @@
 @media screen and (min-width: $laptop-small) and (max-width: $laptop-big) {
   .header {
     height: 660px;
-    background: url(../images/bg-photo-laptop.svg) center center/cover no-repeat;
 
     &__content {
       height: 660px;
@@ -134,6 +134,7 @@
 @media screen and (min-width: $phone-small) and (max-width: $phone-big) {
   .header {
     height: 790px;
+    background: url(../images/bg-photo-laptop.svg) center center/cover no-repeat;
 
     &__content {
       height: 790px;

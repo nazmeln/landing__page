@@ -6,6 +6,7 @@ html {
 
 body,
 p,
+ul,
 h1,
 h2,
 h3,
@@ -17,6 +18,10 @@ button {
 
 body {
   overflow: hidden;
+}
+
+button {
+  padding: 0;
 }
 
 a {

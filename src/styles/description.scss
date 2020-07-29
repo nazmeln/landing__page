@@ -1,0 +1,98 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 512px;
+  padding-left: 0;
+
+  background: $yellow;
+
+  &__image {
+    background: url(../images/people.svg) center center/cover no-repeat;
+    height: 100%;
+    transform: translateX(-10px);
+    width: 50%;
+  }
+
+  &__about {
+    width: 445px;
+    color: #fff;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  }
+
+  &__title {
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: $tablets-small) and (max-width: $tablets-big) {
+  .description {
+    height: 443px;
+
+    &__image {
+      transform: translateX(0);
+      width: 53%;
+    }
+
+    &__about {
+      width: 270px;
+
+    }
+
+    &__title {
+      font-size: 25px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $phone-small) and (max-width: $phone-big) {
+  .description {
+    flex-direction: column;
+    justify-content: initial;
+    padding: 0;
+    height: 707px;
+
+    &__image {
+      width: 105%;
+      height: 220px;
+      transform: translateX(0);
+    }
+
+    &__about {
+      width: 240px;
+      height: 403px;
+      margin-top: 44px;
+    }
+
+    &__title {
+      font-size: 25px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      line-height: 20px;
+    }
+  }
+}

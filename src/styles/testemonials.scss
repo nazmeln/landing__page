@@ -1,0 +1,215 @@
+@import "./variables.scss";
+
+%button-slider {
+  position: absolute;
+  bottom: calc(50% - 45px);
+
+  height: 50px;
+  width: 21px;
+  border: none;
+  opacity: 0.6;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.testemonials {
+  padding-top: 0;
+
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+
+  &__heading {
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 65px;
+    margin-bottom: 60px;
+  }
+
+  &__slider {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+  
+    overflow: hidden;
+  }
+
+  &__clients {
+    display: flex;
+    margin-top: 65px;
+    padding: 0 40px;
+    height: 100px;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    max-width: 170px;
+    margin: 0 10px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.container {
+  position: relative;
+
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 65px;
+}
+
+.slider {
+  display: flex;
+
+  padding: 0;
+  width: fit-content;
+
+  list-style: none;
+  transition: 1s;
+
+  &__button-right {
+    @extend %button-slider;
+    background: url(../images/arrow-right.svg) center center/cover no-repeat;
+    right: -15px;
+  }
+
+  &__button-left {
+    @extend %button-slider;
+    background: url(../images/arrow-left.svg) center center/cover no-repeat;
+    left: -15px;
+  }
+
+  &__item {
+    width: 300px;
+    margin-left: 25px;
+  }
+}
+
+.testemonial {
+
+  &__comment {
+    margin-bottom: 25px;
+    text-align: start;
+
+    font-style: italic;
+    line-height: 30px;
+    font-size: 18px;
+  }
+}
+
+.person {
+
+  &__name {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    text-align: start;
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  &__position {
+    text-align: start;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: $tablets-big) {
+
+  .testemonials {
+
+    &__slider {
+      width: 650px;
+    }
+
+    &__icon {
+      width: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-big) {
+
+  .testemonials {
+
+    &__heading {
+      margin: 40px auto 20px;
+      width: 294px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    &__slider {
+      width: 280px;
+    }
+
+    &__clients {
+      flex-wrap: wrap;
+      height: fit-content;
+    }
+
+    &__icon {
+      width: 60px;
+      margin: 10px;
+    }
+  }
+
+  .testemonial {
+    &__comment {
+      font-size: 14px;
+      line-height: 25px;
+      width: 246px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .slider {
+    &__item {
+      width: 240px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    &__button-right {
+      height: 30px;
+      width: 13px;
+      right: -5px;
+    }
+
+    &__button-left {
+      height: 30px;
+      width: 13px;
+      left: -5px;
+    }
+  }
+
+  .person {
+
+    &__name,
+    &__position,
+    &__comment {
+      text-align: start;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-small) {
+
+  .testemonials {
+
+    &__slider {
+      width: 250px;
+    }
+  }
+
+  .slider__item {
+    width: 230px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

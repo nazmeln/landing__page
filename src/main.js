@@ -44,3 +44,11 @@ function prevPhoto() {
 
   slider.style.transform = `translateX(${position}px)`;
 }
+
+// link for contact
+
+const bookButton = document.querySelector('.header__button');
+
+bookButton.addEventListener('click', () => (
+  window.location = '#contact'
+));

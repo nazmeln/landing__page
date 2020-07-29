@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="icon" href="./images/icon3.svg">
     <script src="main.js" defer></script>
     <title>Test task cience</title>
   </head>
@@ -318,5 +319,90 @@
           alt="spine-logo"
         >
       </div>
+    </section>
+
+    <footer class="footer wrapper" id="contact">
+      <h2 class="footer__title">
+        Vestibulum ornare nec enim at viverra
+        integer non quam euismod.
+      </h2>
+
+      <form
+        action="#"
+        class="footer__form form"
+        autocomplete="off"
+        method="POST"
+      >
+
+      <div class="form__block">
+        <label for="" class="form__label">
+          Your name:
+        </label>
+        <input
+          class="form__input"
+          type="text"
+          name="name"
+          placeholder="John Doe"
+          required
+        >
+      </div>
+
+      <div class="form__block">
+        <label for="email" class="form__label">
+          Your email:
+        </label>
+        <input
+          class="form__input"
+          type="text"
+          name="email"
+          placeholder="john@doe.com"
+          required
+        >
+      </div>
+
+      <div class="form__block--textarea">
+        <label for="textarea" class="form__label">
+          A few warm words:
+        </label>
+        <textarea
+          class="form__textarea"
+          type="text"
+          name="textarea"
+          placeholder=
+            "Lorem ipsum dolor sit amet,consectetur adipisicing elit. Nostrum molestias atque iure numquam aliquid exercitationem sint"
+          id=""></textarea>
+      </div>
+
+      <div class="form__block--accept">
+        <input
+          class="form__input"
+          type="checkbox"
+          name="accept"
+          id="accept"
+        >
+        <label
+          for="accept"
+          class="form__label--accept"
+          id="accept"
+        >
+          I accept the agreement
+        </label>
+        <button class="form__button button">
+          Submit
+        </button>
+      </div>
+      </form>
+
+      <div class="footer__info">
+        <picture class="footer__logo">
+          <source srcset="./images/logo-footer-tablet.svg" media="(max-width: 1199px)">
+          <img src="./images/logo-footer.svg" alt="logo footer">
+        </picture>
+
+        <p class="footer__text">
+          © 2020 Salmiac | All Rights Reserved
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

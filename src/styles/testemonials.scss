@@ -18,6 +18,7 @@
 
 .testemonials {
   padding-top: 0;
+  padding-bottom: 65px;
 
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -40,9 +41,7 @@
   &__clients {
     display: flex;
     height: 90px;
-    // border: 3px solid red;
     justify-content: space-between;
-    margin: 65px 0;
   }
 }
 
@@ -181,6 +180,7 @@
       grid-template-columns: 160px;
       grid-gap: 35px 0;
       height: fit-content;
+      height: -moz-max-content;
       width: 100%;
       justify-content: center;
     }

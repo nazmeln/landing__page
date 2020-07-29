@@ -11,6 +11,7 @@
 
   background-color: $yellow;
   border: none;
+  transition: $transition-duration;
 
   -webkit-box-shadow: 0 5px 20px 0 rgba(90,66,9,0.5);
   -moz-box-shadow: 0 5px 20px 0 rgba(90,66,9,0.5);

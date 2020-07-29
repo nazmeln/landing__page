@@ -5,4 +5,4 @@
 - SCSS
 
 
-- [DEMO](https://nazmeln.github.io/template/)
+- [DEMO](https://nazmeln.github.io/test-task-cience2/)

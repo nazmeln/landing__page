@@ -2,7 +2,7 @@
 
 %button-slider {
   position: absolute;
-  bottom: calc(50% - 45px);
+  bottom: calc(50% - 15px);
 
   height: 50px;
   width: 21px;
@@ -39,17 +39,10 @@
 
   &__clients {
     display: flex;
-    margin-top: 65px;
-    padding: 0 40px;
-    height: 100px;
+    height: 90px;
+    // border: 3px solid red;
     justify-content: space-between;
-  }
-
-  &__icon {
-    max-width: 170px;
-    margin: 0 10px;
-    width: 100%;
-    object-fit: contain;
+    margin: 65px 0;
   }
 }
 
@@ -127,8 +120,43 @@
       width: 650px;
     }
 
+    &__clients {
+      display: grid;
+      grid-template-columns: repeat(3, 160px);
+      justify-items: center;
+      align-items: center;
+      height: 200px;
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &__icon {
-      width: 80px;
+      &:nth-of-type(1) {
+        order: 3;
+      }
+
+      &:nth-of-type(2) {
+        justify-self: flex-start;
+        order: 4;
+      }
+
+      &:nth-of-type(3) {
+        order: 1;
+      }
+
+      &:nth-of-type(4) {
+        order: 2;
+      }
+
+      &:nth-of-type(5) {
+        order: 5;
+      }
+
+      &:nth-of-type(6) {
+        justify-self: flex-end;
+        order: 6;
+      }
     }
   }
 }
@@ -145,17 +173,28 @@
     }
 
     &__slider {
-      width: 280px;
+      width: 260px;
     }
 
     &__clients {
-      flex-wrap: wrap;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: 160px;
+      grid-gap: 35px 0;
       height: fit-content;
+      width: 100%;
+      justify-content: center;
     }
 
     &__icon {
-      width: 60px;
-      margin: 10px;
+
+      &:nth-of-type(2) {
+        justify-self: center;
+        order: 4;
+      }
+
+      &:nth-of-type(6) {
+        justify-self: center;
+      }
     }
   }
 
@@ -171,20 +210,20 @@
   .slider {
     &__item {
       width: 240px;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
 
     &__button-right {
       height: 30px;
       width: 13px;
-      right: -5px;
+      right: 0;
     }
 
     &__button-left {
       height: 30px;
       width: 13px;
-      left: -5px;
+      left: 0;
     }
   }
 

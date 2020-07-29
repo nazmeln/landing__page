@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/header.scss"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,oFAA6E,EAAA","file":"style.ff1c4cab.css","sourceRoot":"../src","sourcesContent":[".header {\n  height: 100vh;\n  background: url(../images/bg-photo-full-hd.svg) center center/cover no-repeat;\n}\n"]}

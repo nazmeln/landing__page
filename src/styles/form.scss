@@ -1,0 +1,215 @@
+%font {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 540px;
+  margin: 0 auto;
+  color: #fff;
+
+  &__block {
+    height: 104px;
+    margin-bottom: 40px;
+  }
+
+  &__block--textarea {
+    height: 160px;
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+    display: block;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    width: 540px;
+    height: 57px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: $blue;
+
+    @extend %font;
+
+    &::placeholder {
+      opacity: 0.5;
+      color: $blue;
+    }
+
+    &:focus {
+      border: 2px solid $yellow;
+    }
+  }
+
+  &__label--accept {
+    @extend %font;
+  }
+
+  &__textarea {
+    width: 540px;
+    height: 114px;
+    box-sizing: border-box;
+    padding: 15px 18px;
+    border-radius: 5px;
+    color: $blue;
+
+    @extend %font;
+
+    &::placeholder {
+      opacity: 0.5;
+      color: $blue;
+    }
+
+    &:focus {
+      border: 2px solid $yellow;
+    }
+  }
+
+  &__block--accept {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    & input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      margin-right: 5px;
+    }
+
+    & label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    & label::before {
+      content: "";
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      margin-right: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: #fff;
+      background-size: 50% 50%;
+      cursor: pointer;
+    }
+
+    & input:checked + label::before {
+      background: url(../images/checkbox.svg) center center/cover no-repeat;
+    }
+  }
+
+  &__button {
+    width: 160px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: $tablets-small) and (max-width: $tablets-big) {
+  .form {
+    width: 450px;
+    height: 400px;
+    box-sizing: border-box;
+
+    &__block {
+      margin-bottom: 20px;
+    }
+
+    &__label,
+    &__input,
+    &__textarea {
+      font-size: 16px;
+      line-height: 16px;
+      width: 450px;
+    }
+
+    &__label {
+      margin-bottom: 10px;
+    }
+
+    &__input {
+      height: 42px;
+      padding: 10px 15px;
+    }
+
+    &__textarea {
+      height: 100px;
+    }
+
+    &__label--accept {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__button {
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: $phone-small) and (max-width: $phone-big) {
+  .form {
+    width: 295px;
+
+    &__block {
+      height: 74px;
+      margin-bottom: 20px;
+    }
+
+    &__block--textarea {
+      height: 155px;
+      margin-bottom: 20px;
+    }
+
+    &__block--accept {
+      flex-direction: column;
+      height: 100px;
+    }
+
+    &__label,
+    &__input,
+    &__textarea {
+      font-size: 16px;
+      line-height: 16px;
+      width: 295px;
+    }
+
+    &__label {
+      margin-bottom: 10px;
+    }
+
+    &__input {
+      height: 42px;
+      padding: 10px 15px;
+    }
+
+    &__textarea {
+      height: 123px;
+    }
+
+    &__label--accept {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__button {
+      height: 40px;
+      align-self: center;
+    }
+  }
+}

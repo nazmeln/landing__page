@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+.wrapper {
+  padding: 0 calc(50% - 555px);
+}
+
+@media screen and (min-width: $tablets-small) and (max-width: $tablets-big) {
+  .wrapper {
+    padding: 0 39px;
+  }
+}
+
+@media screen and (min-width: $laptop-small) and (max-width: $laptop-big) {
+  .wrapper {
+    padding: 0 105px;
+  }
+}
+
+@media screen and (min-width: $phone-small) and (max-width: $phone-big) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}

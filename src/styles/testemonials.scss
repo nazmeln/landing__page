@@ -1,0 +1,254 @@
+@import "./variables.scss";
+
+%button-slider {
+  position: absolute;
+  bottom: calc(50% - 15px);
+
+  height: 50px;
+  width: 21px;
+  border: none;
+  opacity: 0.6;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.testemonials {
+  padding-top: 0;
+  padding-bottom: 65px;
+
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+
+  &__heading {
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 65px;
+    margin-bottom: 60px;
+  }
+
+  &__slider {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+  
+    overflow: hidden;
+  }
+
+  &__clients {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+  }
+}
+
+.container {
+  position: relative;
+
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 65px;
+}
+
+.slider {
+  display: flex;
+
+  padding: 0;
+  width: fit-content;
+
+  list-style: none;
+  transition: 1s;
+
+  &__button-right {
+    @extend %button-slider;
+    background: url(../images/arrow-right.svg) center center/cover no-repeat;
+    right: -15px;
+  }
+
+  &__button-left {
+    @extend %button-slider;
+    background: url(../images/arrow-left.svg) center center/cover no-repeat;
+    left: -15px;
+  }
+
+  &__item {
+    width: 300px;
+    margin-left: 25px;
+  }
+}
+
+.testemonial {
+
+  &__comment {
+    margin-bottom: 25px;
+    text-align: start;
+
+    font-style: italic;
+    line-height: 30px;
+    font-size: 18px;
+  }
+}
+
+.person {
+
+  &__name {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    text-align: start;
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  &__position {
+    text-align: start;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: $tablets-big) {
+
+  .testemonials {
+
+    &__slider {
+      width: 650px;
+    }
+
+    &__clients {
+      display: grid;
+      grid-template-columns: repeat(3, 160px);
+      justify-items: center;
+      align-items: center;
+      height: 200px;
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__icon {
+      &:nth-of-type(1) {
+        order: 3;
+      }
+
+      &:nth-of-type(2) {
+        justify-self: flex-start;
+        order: 4;
+      }
+
+      &:nth-of-type(3) {
+        order: 1;
+      }
+
+      &:nth-of-type(4) {
+        order: 2;
+      }
+
+      &:nth-of-type(5) {
+        order: 5;
+      }
+
+      &:nth-of-type(6) {
+        justify-self: flex-end;
+        order: 6;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phone-big) {
+
+  .testemonials {
+
+    &__heading {
+      margin: 40px auto 20px;
+      width: 294px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    &__slider {
+      width: 260px;
+    }
+
+    &__clients {
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: 160px;
+      grid-gap: 35px 0;
+      height: fit-content;
+      height: -moz-max-content;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__icon {
+
+      &:nth-of-type(2) {
+        justify-self: center;
+        order: 4;
+      }
+
+      &:nth-of-type(6) {
+        justify-self: center;
+      }
+    }
+  }
+
+  .testemonial {
+    &__comment {
+      font-size: 14px;
+      line-height: 25px;
+      width: 246px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .slider {
+    &__item {
+      width: 240px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &__button-right {
+      height: 30px;
+      width: 13px;
+      right: 0;
+    }
+
+    &__button-left {
+      height: 30px;
+      width: 13px;
+      left: 0;
+    }
+  }
+
+  .person {
+
+    &__name,
+    &__position,
+    &__comment {
+      text-align: start;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-small) {
+
+  .testemonials {
+
+    &__slider {
+      width: 250px;
+    }
+  }
+
+  .slider__item {
+    width: 230px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

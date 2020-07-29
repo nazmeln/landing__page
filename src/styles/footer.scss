@@ -1,0 +1,84 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  background: $blue;
+  color: #fff;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+  &__title {
+    max-width: 730px;
+    width: 100%;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 45px;
+  }
+
+  &__info {
+    display: flex;
+    height: 75px;
+    margin: 50px auto 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 357px;
+  }
+
+  &__text {
+    width: 265px;
+    font-weight: 300;
+    height: 19px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: $tablets-small) and (max-width: $tablets-big) {
+  .footer {
+    height: 720px;
+    padding-top: 40px;
+    overflow: hidden;
+
+    &__title {
+      font-size: 30px;
+      width: 570px;
+    }
+
+    &__info {
+      width: 300px;
+      height: 50px;
+    }
+
+    &__text {
+      width: 232px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: $phone-small) and (max-width: $phone-big) {
+  .footer {
+    padding-top: 40px;
+
+    &__title {
+      font-size: 25px;
+      line-height: 35px;
+      width: 240px;
+      margin-bottom: 30px;
+    }
+
+    &__info {
+      width: 230px;
+      height: 19px;
+      letter-spacing: -0.01em;
+      margin-top: 40px;
+    }
+
+    &__logo {
+      display: none;
+    }
+  }
+}
